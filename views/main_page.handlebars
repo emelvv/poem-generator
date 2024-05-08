@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Welcome to the Poem Generator</h1>
+            <p>Enter a word to generate a unique poem just for you!</p>
+            <form>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter a word" aria-label="Enter a word" aria-describedby="generate-button" id="word_input">
+                    <script>
+                        word_input.addEventListener('keydown', function(event) {
+                            if (event.key === 'Enter') {
+                                event.preventDefault();
+                                generate();
+                            }
+                        });
+                    </script>
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="generate_button" onclick="generate()">Generate</button>
+                        {{#if username}}
+                        <script src="poem.js"></script>
+                        {{else}}
+                        <script>
+                            function generate(){alert("First you need to log in to your account.")}
+                        </script>
+                        {{/if}}
+                    </div>
+                </div>
+                <div class="progress">
+                    <div id='progress-bar' class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                </div>
+                <p style="white-space: pre-wrap;margin-top: 48px;margin-bottom: 264px;">{{{lastPoem}}}</p>
+            </form>
+        </div>
+    </div>
+</div>

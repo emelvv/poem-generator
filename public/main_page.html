@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poem Generator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main_page.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">Poem Generator</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Main Page</a>
+                </li>
+            </ul>
+            <div class="status-container">
+                <span id="status-text">Not logged in</span>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Welcome to the Poem Generator</h1>
+                <p>Enter a word to generate a unique poem just for you!</p>
+                <form>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Enter a word" aria-label="Enter a word" aria-describedby="generate-button">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="generate-button">Generate</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Poem Generator | All rights reserved</p>
+    </footer>
+</body>
+</html>
