@@ -1,5 +1,3 @@
-Конечно, вот пример содержимого README файла для вашего проекта:
-
 # Poem Generator
 
 ![preview](media/preview.png)
